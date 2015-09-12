@@ -7,11 +7,11 @@ import java.awt.geom.Point2D;
 
 public class Mouse implements MouseListener, MouseMotionListener
 {
-	private static Point2D point = new Point2D.Double();
-	private static boolean isPressedLeft;
-	private static boolean isPressedRight;
-	private static boolean isDraggedLeft;
-	private static boolean isDraggedRight;
+	private Point2D point = new Point2D.Double();
+	private boolean isPressedLeft;
+	private boolean isPressedRight;
+	private boolean isDraggedLeft;
+	private boolean isDraggedRight;
 	
 	public void mouseDragged(MouseEvent e) 
 	{
@@ -67,27 +67,27 @@ public class Mouse implements MouseListener, MouseMotionListener
 		if(e.getButton() == MouseEvent.BUTTON3) isPressedRight = true;
 	}
 	
-	public static Point2D getPoint()
+	public Point2D getPoint()
 	{
 		return point;
 	}
 	
-	public static boolean isLeftDown()
+	public boolean isLeftDown()
 	{
 		return isPressedLeft;
 	}
 	
-	public static boolean isRightDown()
+	public boolean isRightDown()
 	{
 		return isPressedRight;
 	}
 	
-	public static boolean isDraggedLeft()
+	public boolean isDraggedLeft()
 	{
 		return isDraggedLeft;
 	}
 	
-	public static boolean isDraggedRight()
+	public boolean isDraggedRight()
 	{
 		return isDraggedRight;
 	}
