@@ -53,18 +53,18 @@ public class Framework
 		{
 			panel.update();
 			
-			long start = System.nanoTime();
+			long tick = System.nanoTime();
 			
 			update();
 			draw();
 			repaint();
 			
-			long z = System.nanoTime();
-			long delay = fps_timeMax - (z - start);
+			long start = System.nanoTime();
+			long delay = fps_timeMax - (start - tick);
 			
-			while(z + delay >= System.nanoTime())
+			while(start + delay >= System.nanoTime())
 			{				
-				sleep((z + delay - System.nanoTime()) / 1000000L - 1);
+				sleep((start + delay - System.nanoTime()) / 1000000L - 1);
 			}
 		}
 	}
