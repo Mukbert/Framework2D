@@ -110,6 +110,12 @@ public class EntityBasic
 		setHeight(height);
 	}
 	
+	public void setSize(double size)
+	{
+		setWidth(size);
+		setHeight(size);
+	}
+	
 	public void setSize(EntityBasic entity)
 	{
 		setSize(entity.getWidth(), entity.getHeight());

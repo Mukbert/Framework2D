@@ -5,7 +5,7 @@ import java.awt.event.KeyEvent;
 
 public class Keyboard extends KeyAdapter
 {
-	private static boolean[] isKeyPressed;
+	private boolean[] isKeyPressed;
 	
 	public Keyboard()
 	{
@@ -33,7 +33,7 @@ public class Keyboard extends KeyAdapter
 		}
 	}
 	
-	public static boolean isKeyDown(int code)
+	public boolean isKeyDown(int code)
 	{
 		if(code >= 0 && code < isKeyPressed.length)
 		{
